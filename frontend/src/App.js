@@ -4,11 +4,10 @@ import './App.css';
 import { Legend, LineChart, XAxis, YAxis, CartesianGrid, Line, Brush } from 'recharts';
 
 function tickFormatter() {
-  let lastDate = null;
-  let lastMonth = null;
   return function(s) {
     let d = new Date(s)
-    let [_, time] = s.split('T');
+    // eslint-disable-next-line
+    let [_x, time] = s.split('T');
     let [h] = time.split(':');
     let dayStr = d.toDateString().split(' ').slice(1, 3).join(' ')
     return dayStr + ' ' + h + 'h';
