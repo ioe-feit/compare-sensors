@@ -1,0 +1,13 @@
+{
+  "name": "jk-sensors",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "create-react-app": "^1.4.3",
+    "lodash": "^4.17.4",
+    "promise-streams": "^2.1.1",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}
