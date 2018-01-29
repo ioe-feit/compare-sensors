@@ -20,8 +20,8 @@ class App extends Component {
     super(props);
     this.state = { data: [] };
     Promise.all([
-      fetch('/mojvozduh-utc-1k.json').then(r => r.json()),
-      fetch('/othersensor-medians.json').then(r => r.json())
+      fetch('mojvozduh-utc-1k.json').then(r => r.json()),
+      fetch('othersensor-medians.json').then(r => r.json())
     ]).then(([mojvozduh, sensor]) => {
       console.log(mojvozduh, sensor);
       mojvozduh = mojvozduh.map(mv => ({ datetime: mv.datetime, mojvozduh: mv.data }));
